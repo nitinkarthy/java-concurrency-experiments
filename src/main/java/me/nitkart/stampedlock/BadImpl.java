@@ -7,10 +7,11 @@ public class BadImpl {
     String previousValue = "";
     String currValue = "";
 
-    public void methodOne() {
+    public String methodOne() {
         long stamp = lock.writeLock();
         previousValue = currValue;
         currValue = "" + System.currentTimeMillis();
         lock.unlock(stamp);
+        return currValue;
     }
 }

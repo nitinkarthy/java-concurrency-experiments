@@ -12,7 +12,7 @@ public class Main {
                 .include(BenchmarkStampedLock.class.getSimpleName())
                 .forks(1)
                 .warmupIterations(5)
-                .measurementIterations(5)
+                .measurementIterations(20)
                 .threads(10)
                 .build();
         new Runner(opt).run();
